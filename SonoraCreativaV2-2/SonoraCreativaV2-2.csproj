@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10E56FD8-1BD1-48E9-BDEE-6171E36699C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SonoraCreativaV2_2</RootNamespace>
+    <AssemblyName>SonoraCreativaV2-2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\KuronekoIS\Documents\Proyecto Final Instaladores\Instalador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6CA39548D42C3766CDB2CB3A850DF8BBAA14E079</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SonoraCreativaV2-2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CobrosIdItemListDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CobrosIdItemListDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionsSQL\ConexionSCDB.cs" />
+    <Compile Include="InventarioDS1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioDS1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioEmpleadosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioEmpleadosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioGVDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioGVDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventarioEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventarioEmpleado.Designer.cs">
+      <DependentUpon>InventarioEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Principal Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Principal Employee.Designer.cs">
+      <DependentUpon>Menu Principal Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu principal.Designer.cs">
+      <DependentUpon>Menu principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\Cobros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment\Cobros.Designer.cs">
+      <DependentUpon>Cobros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Cambiar contrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\Cambiar contrasena.Designer.cs">
+      <DependentUpon>Cambiar contrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Confirmar Eliminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\Confirmar Eliminacion.Designer.cs">
+      <DependentUpon>Confirmar Eliminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Editar Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\Editar Usuario.Designer.cs">
+      <DependentUpon>Editar Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioGVDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsuarioGVDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VentasGVDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentasGVDS.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Inventory\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventarioEmpleado.resx">
+      <DependentUpon>InventarioEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Principal Employee.resx">
+      <DependentUpon>Menu Principal Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu principal.resx">
+      <DependentUpon>Menu principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment\Cobros.resx">
+      <DependentUpon>Cobros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Sales\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Cambiar contrasena.resx">
+      <DependentUpon>Cambiar contrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Confirmar Eliminacion.resx">
+      <DependentUpon>Confirmar Eliminacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Editar Usuario.resx">
+      <DependentUpon>Editar Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CobrosIdItemListDS.xsc">
+      <DependentUpon>CobrosIdItemListDS.xsd</DependentUpon>
+    </None>
+    <None Include="CobrosIdItemListDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CobrosIdItemListDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CobrosIdItemListDS.xss">
+      <DependentUpon>CobrosIdItemListDS.xsd</DependentUpon>
+    </None>
+    <None Include="InventarioDS1.xsc">
+      <DependentUpon>InventarioDS1.xsd</DependentUpon>
+    </None>
+    <None Include="InventarioDS1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventarioDS1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventarioDS1.xss">
+      <DependentUpon>InventarioDS1.xsd</DependentUpon>
+    </None>
+    <None Include="InventarioEmpleadosDS.xsc">
+      <DependentUpon>InventarioEmpleadosDS.xsd</DependentUpon>
+    </None>
+    <None Include="InventarioEmpleadosDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventarioEmpleadosDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventarioEmpleadosDS.xss">
+      <DependentUpon>InventarioEmpleadosDS.xsd</DependentUpon>
+    </None>
+    <None Include="InventarioGVDS.xsc">
+      <DependentUpon>InventarioGVDS.xsd</DependentUpon>
+    </None>
+    <None Include="InventarioGVDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventarioGVDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventarioGVDS.xss">
+      <DependentUpon>InventarioGVDS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SonoraCreativaV2-2_TemporaryKey.pfx" />
+    <None Include="UsuarioGVDS.xsc">
+      <DependentUpon>UsuarioGVDS.xsd</DependentUpon>
+    </None>
+    <None Include="UsuarioGVDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsuarioGVDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UsuarioGVDS.xss">
+      <DependentUpon>UsuarioGVDS.xsd</DependentUpon>
+    </None>
+    <None Include="VentasGVDS.xsc">
+      <DependentUpon>VentasGVDS.xsd</DependentUpon>
+    </None>
+    <None Include="VentasGVDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VentasGVDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VentasGVDS.xss">
+      <DependentUpon>VentasGVDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SonoraCreativaBD.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SonoraCreativaBD_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SonoraCreativaBD.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.15.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2019 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
